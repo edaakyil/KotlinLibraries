@@ -8,6 +8,7 @@
     <artifactId>com-edaakyil-kotlin-util-console</artifactId>
     <version>1.0.0</version>
     <name>com-edaakyil-kotlin-util-console</name>
+    <description>Console library for stdin and stdout operations</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

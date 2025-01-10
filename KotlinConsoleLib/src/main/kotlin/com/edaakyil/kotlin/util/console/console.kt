@@ -1,24 +1,17 @@
 package com.edaakyil.kotlin.util.console
 
-fun readInt(prompt: String): Int {
-    print(prompt)
-    return readln().toInt()
-}
-
-fun readLong(prompt: String): Long {
-    print(prompt)
-    return readln().toLong()
-}
-
-fun readDouble(prompt: String): Double {
-    print(prompt)
-    return readln().toDouble()
-}
-
-fun readString(prompt: String): String {
+internal fun readWithPrompt(prompt: String): String {
     print(prompt)
     return readln()
 }
+
+fun readInt(prompt: String) = readWithPrompt(prompt).toInt()
+
+fun readLong(prompt: String) = readWithPrompt(prompt).toLong()
+
+fun readDouble(prompt: String) = readWithPrompt(prompt).toDouble()
+
+fun readString(prompt: String) = readWithPrompt(prompt)
 
 fun printArray(arr: IntArray, n: Int = -1, sep: String = " ", end: String = "\n") {
     // val fmt = "%%0%dd%%s".format(n) // n == 2 ise "%02d%s"

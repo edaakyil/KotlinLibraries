@@ -23,5 +23,8 @@ class AnalyticalCircle(radius: Double = 0.0, x: Double = 0.0, y: Double = 0.0) :
 
     fun isTangent(other: AnalyticalCircle) = (centerDistance(other) - radius - other.radius).absoluteValue < 0.00001
 
+    override fun equals(other: Any?) = other is AnalyticalCircle && super.equals(other) && mCenter == other.mCenter
+    //override fun equals(other: Any?) = other is AnalyticalCircle && super.equals(other) && mCenter.equals(other.mCenter)
+
     override fun toString() = "${super.toString()}, Center: $mCenter"
 }
